@@ -32,3 +32,34 @@ header_type checker_t {
 header ethernet_t ethernet;
 header ipv4_t ipv4;
 header checker_t checker;
+
+header_type my_metadata_t {
+    fields {
+        hash_val0: 16;
+        hash_val1: 16;
+        hash_val2: 16;
+        count_val0: 16;
+        count_val1: 16;
+        count_val2: 16;
+    }
+}
+
+header my_metadata_t my_metadata;
+
+register heavy_hitter_register0 {
+    width : 16;
+    instance_count : 65536;
+}
+
+register heavy_hitter_register1 {
+    width : 16;
+    instance_count : 65536;
+}
+
+register heavy_hitter_register2 {
+    width : 16;
+    instance_count : 65536;
+}
+
+
+

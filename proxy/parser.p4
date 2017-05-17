@@ -28,3 +28,34 @@ parser parse_checker {
     extract(checker);
 	return ingress;
 }
+
+field_list hash_fields { // ip 3 tuple
+    ipv4.srcAddr;
+    ipv4.dstAddr;
+    ipv4.protocol;
+}
+
+field_list_calculation heavy_hitter_hash0 { // hash function 0
+    input { 
+        hash_fields;
+    }
+    algorithm : csum16;
+    output_width : 16;
+}
+
+field_list_calculation heavy_hitter_hash1 { // hash function 1
+    input { 
+        hash_fields;
+    }
+    algorithm : crc16;
+    output_width : 16;
+}
+
+field_list_calculation heavy_hitter_hash2 { // hash function 2
+    input { 
+        hash_fields;
+    }
+    algorithm : bmv2_hash;
+    output_width : 16;
+}
+
