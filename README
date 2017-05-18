@@ -1,4 +1,10 @@
+Preinstall
+--------
+p4
 
+
+Run
+--------
 $ ./compile_bmv2.sh
 $ ./network.py
 $ ./send_cmd.sh
@@ -8,3 +14,23 @@ mininet> xterm h1 h2
 (h1)$ ./sender.py
 (h2)$ ./receiver.py
 
+
+Curent method
+--------
+Proxy
+* Add token between IP header and TCP header
+* Traffic monitor(count min sketch with 3 hashes)
+	** IP 3 tuple as key
+	** Constant threshold for heavy hitter detection
+	** Timestamp window to exclude too old counts
+
+Router
+*Check token
+	** drop packet if invalid
+	
+Support bi-direction
+
+Current topology
+--------
+   [  proxy  ]     [router]   [server]
+---host1----P4S------P4S--------host2
