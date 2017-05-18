@@ -41,6 +41,9 @@ header_type my_metadata_t {
         count_val0: 16;
         count_val1: 16;
         count_val2: 16;
+        timestamp0: 48;
+        timestamp1: 48;
+        timestamp2: 48;
     }
 }
 
@@ -61,5 +64,19 @@ register heavy_hitter_register2 {
     instance_count : 65536;
 }
 
+register timestamp_register0 {
+    width : 48;
+    instance_count : 65536;
+}
+
+register timestamp_register1 {
+    width : 48;
+    instance_count : 65536;
+}
+
+register timestamp_register2 {
+    width : 48;
+    instance_count : 65536;
+}
 
 
