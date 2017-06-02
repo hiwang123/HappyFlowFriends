@@ -6,9 +6,9 @@ from scapy.all import hexdump
 from scapy.all import IP
 
 def myprint(pkt):
-    #hexdump(pkt)
-    #x.show()
     if IP in pkt:
+    	hexdump(pkt)
+    	pkt.show()
     	print pkt[IP].src, pkt[IP].dst, pkt[IP].proto
 
 def main():

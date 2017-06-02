@@ -3,7 +3,7 @@
 #define check_key 0xdeadbeef
 
 control ingress {
-    if(standard_metadata.ingress_port == 0) {
+    if(standard_metadata.ingress_port == 2 and ethernet.etherType == ETHERTYPE_IPV4) {
         if(checker.val != check_key) {
         	apply(table_drop);
         } else {

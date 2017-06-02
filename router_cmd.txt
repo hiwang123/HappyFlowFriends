@@ -1,5 +1,4 @@
-table_add table_forward action_forward 0 => 1
 table_add table_forward action_forward 2 => 1
-table_add table_forward action_forward 1 => 0
+table_add table_forward action_forward 1 => 2
 table_set_default table_drop action_drop
 table_set_default table_remove_header action_remove_header

@@ -30,6 +30,8 @@ table table_drop {
 action action_add_header() {
     add_header(checker);
     modify_field(checker.val, check_key);
+    modify_field(ipv4.totalLen, ipv4.totalLen + 4);
+    modify_field_with_hash_based_offset(ipv4.hdrChecksum, 0, ipv4_new_hdrChecksum, 65536);
 }
 
 table table_add_header {
@@ -43,9 +45,9 @@ table table_add_header {
 
 // count min sketch init
 action action_get_hash_val() {
-    modify_field_with_hash_based_offset(my_metadata.hash_val0, 0, heavy_hitter_hash0, 16);
-    modify_field_with_hash_based_offset(my_metadata.hash_val1, 0, heavy_hitter_hash1, 16);
-    modify_field_with_hash_based_offset(my_metadata.hash_val2, 0, heavy_hitter_hash2, 16);
+    modify_field_with_hash_based_offset(my_metadata.hash_val0, 0, heavy_hitter_hash0, 65536);
+    modify_field_with_hash_based_offset(my_metadata.hash_val1, 0, heavy_hitter_hash1, 65536);
+    modify_field_with_hash_based_offset(my_metadata.hash_val2, 0, heavy_hitter_hash2, 65536);
 }
 
 table table_count_min_sketch_init {

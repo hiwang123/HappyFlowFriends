@@ -17,7 +17,7 @@ mininet> xterm h1 h2
 
 Curent method
 --------
-Proxy
+Proxy(only from proxy to router)
 * Add token between IP header and TCP header
 * Traffic monitor(count min sketch with 3 hashes)
 	** IP 3 tuple as key
@@ -32,5 +32,21 @@ Support bi-direction
 
 Current topology
 --------
-   [  proxy  ]     [router]   [server]
----host1----P4S------P4S--------host2
+         h3 0 -- 1 s3 2
+                      |
+                      | 
+h1 0 -- 1 P4s1 2 ---- R ---- 2 P4s2 1 ---- 0 h2
+[     proxy    ]               [router]    [server]
+
+Test
+--------
+Connectivity
+1.	mininet> h1 ping h2
+2.	h2> nc -l 1234
+	h1> nc 10.2.0.100 1234 -p 5678
+	h3> nc 10.2.0.100 1234 -p 5678
+
+Monitor
+	#TODO: Add client
+	
+
