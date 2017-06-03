@@ -6,6 +6,16 @@ header_type ethernet_t {
     }
 }
 
+header_type arp_ipv4_t {
+    fields {
+    	ignore: 64;
+        src_mac : 48;
+        src_ip : 32;
+        dst_mac : 48;
+        dst_ip : 32;
+    }
+}
+
 header_type ipv4_t {
     fields {
         version : 4;
@@ -23,15 +33,9 @@ header_type ipv4_t {
     }
 }
 
-header_type checker_t {
-    fields {
-        val : 32;
-    }
-}
-
 header ethernet_t ethernet;
 header ipv4_t ipv4;
-header checker_t checker;
+header arp_ipv4_t arp_ipv4;
 
 header_type my_metadata_t {
     fields {

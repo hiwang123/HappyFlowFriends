@@ -1,0 +1,152 @@
+0000   18 3D A2 E8 F1 61 64 09  80 7B AF FF 08 00 45 00   .=...ad..{....E.
+0010   00 53 E9 1E 40 00 27 06  CC 98 C0 1E FD 7D C0 A8   .S..@.'......}..
+0020   1F A9 DE AD BE EF C5 29  96 CC B5 A7 69 5C 80 18   .......)....i\..
+0030   00 1F 7A FB 00 00 01 01  08 0A CB 8A 2C AD 00 7C   ..z.........,..|
+0040   E5 21 17 03 03 00 1A 18  5A BE D5 92 67 78 EC C6   .!......Z...gx..
+0050   F1 07 D5 75 C6 3F 8E CF  6D 61 79 E3 43 EB 8C BE   ...u.?..may.C...
+0060   CE                                                 .
+###[ Ethernet ]### 
+  dst       = 18:3d:a2:e8:f1:61
+  src       = 64:09:80:7b:af:ff
+  type      = 0x800
+###[ IP ]### 
+     version   = 4L
+     ihl       = 5L
+     tos       = 0x0
+     len       = 83
+     id        = 59678
+     flags     = DF
+     frag      = 0L
+     ttl       = 39
+     proto     = tcp
+     chksum    = 0xcc98
+     src       = 192.30.253.125
+     dst       = 192.168.31.169
+     \options   \
+###[ TCP ]### 
+        sport     = 57005
+        dport     = 48879
+        seq       = 3307837132
+        ack       = 3047647580
+        dataofs   = 8L
+        reserved  = 0L
+        flags     = PA
+        window    = 31
+        chksum    = 0x7afb
+        urgptr    = 0
+        options   = [('NOP', None), ('NOP', None), ('Timestamp', (3414830253, 8185121))]
+###[ Raw ]### 
+           load      = '\x17\x03\x03\x00\x1a\x18Z\xbe\xd5\x92gx\xec\xc6\xf1\x07\xd5u\xc6?\x8e\xcfmay\xe3C\xeb\x8c\xbe\xce'
+
+0000   64 09 80 7B AF FF 18 3D  A2 E8 F1 61 08 00 45 00   d..{...=...a..E.
+0010   00 57 C2 69 40 00 40 06  DA 49 C0 A8 1F A9 C0 1E   .W.i@.@..I......
+0020   FD 7D DE AD BE EF B5 A7  69 5C C5 29 96 EB 80 18   .}......i\.)....
+0030   00 1F 7F 18 00 00 01 01  08 0A 00 7D 20 08 CB 8A   ...........} ...
+0040   2C AD 17 03 03 00 1E 00  00 00 00 00 00 02 23 24   ,.............#$
+0050   38 35 23 8F 38 93 BD C8  5E 94 8B 7D 8B AA D9 E3   85#.8...^..}....
+0060   E8 76 2B A0 0A                                     .v+..
+###[ Ethernet ]### 
+  dst       = 64:09:80:7b:af:ff
+  src       = 18:3d:a2:e8:f1:61
+  type      = 0x800
+###[ IP ]### 
+     version   = 4L
+     ihl       = 5L
+     tos       = 0x0
+     len       = 87
+     id        = 49769
+     flags     = DF
+     frag      = 0L
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0xda49
+     src       = 192.168.31.169
+     dst       = 192.30.253.125
+     \options   \
+###[ TCP ]### 
+        sport     = 57005
+        dport     = 48879
+        seq       = 3047647580
+        ack       = 3307837163
+        dataofs   = 8L
+        reserved  = 0L
+        flags     = PA
+        window    = 31
+        chksum    = 0x7f18
+        urgptr    = 0
+        options   = [('NOP', None), ('NOP', None), ('Timestamp', (8200200, 3414830253))]
+###[ Raw ]### 
+           load      = '\x17\x03\x03\x00\x1e\x00\x00\x00\x00\x00\x00\x02#$85#\x8f8\x93\xbd\xc8^\x94\x8b}\x8b\xaa\xd9\xe3\xe8v+\xa0\n'
+
+0000   18 3D A2 E8 F1 61 64 09  80 7B AF FF 08 00 45 00   .=...ad..{....E.
+0010   00 34 E9 1F 40 00 27 06  CC B6 C0 1E FD 7D C0 A8   .4..@.'......}..
+0020   1F A9 DE AD BE EF C5 29  96 EB B5 A7 69 7F 80 10   .......)....i...
+0030   00 1F 99 E1 00 00 01 01  08 0A CB 8A 2C ED 00 7D   ............,..}
+0040   20 08                                               .
+###[ Ethernet ]### 
+  dst       = 18:3d:a2:e8:f1:61
+  src       = 64:09:80:7b:af:ff
+  type      = 0x800
+###[ IP ]### 
+     version   = 4L
+     ihl       = 5L
+     tos       = 0x0
+     len       = 52
+     id        = 59679
+     flags     = DF
+     frag      = 0L
+     ttl       = 39
+     proto     = tcp
+     chksum    = 0xccb6
+     src       = 192.30.253.125
+     dst       = 192.168.31.169
+     \options   \
+###[ TCP ]### 
+        sport     = 57005
+        dport     = 48879
+        seq       = 3307837163
+        ack       = 3047647615
+        dataofs   = 8L
+        reserved  = 0L
+        flags     = A
+        window    = 31
+        chksum    = 0x99e1
+        urgptr    = 0
+        options   = [('NOP', None), ('NOP', None), ('Timestamp', (3414830317, 8200200))]
+
+0000   64 09 80 7B AF FF 18 3D  A2 E8 F1 61 08 00 45 00   d..{...=...a..E.
+0010   00 34 44 61 40 00 40 06  58 76 C0 A8 1F A9 C0 1E   .4Da@.@.Xv......
+0020   FD 7C DE AD BE EF C0 1B  77 88 B4 A9 C2 71 80 10   .|......w....q..
+0030   00 1F 7C 00 00 00 01 01  08 0A 00 7D 20 A0 CB 8A   ..|........} ...
+0040   01 3A                                              .:
+###[ Ethernet ]### 
+  dst       = 64:09:80:7b:af:ff
+  src       = 18:3d:a2:e8:f1:61
+  type      = 0x800
+###[ IP ]### 
+     version   = 4L
+     ihl       = 5L
+     tos       = 0x0
+     len       = 52
+     id        = 17505
+     flags     = DF
+     frag      = 0L
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x5876
+     src       = 192.168.31.169
+     dst       = 192.30.253.124
+     \options   \
+###[ TCP ]### 
+        sport     = 57005
+        dport     = 48879
+        seq       = 3223025544
+        ack       = 3031024241
+        dataofs   = 8L
+        reserved  = 0L
+        flags     = A
+        window    = 31
+        chksum    = 0x7c00
+        urgptr    = 0
+        options   = [('NOP', None), ('NOP', None), ('Timestamp', (8200352, 3414819130))]
+

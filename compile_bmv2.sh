@@ -2,13 +2,18 @@
 source env.sh
 COMPILER=$P4C_BM_PATH/p4c_bm/__main__.py
 
-if [ -f "proxy.json" ]; then
-    rm proxy.json
+if [ -f "monitor.json" ]; then
+    rm monitor.json
 fi
 
-if [ -f "router.json" ]; then
+if [ -f "token.json" ]; then
+    rm token.json
+fi
+
+if [ -f "verifier.json" ]; then
     rm router.json
 fi
 
-$COMPILER --json proxy.json proxy/main.p4
-$COMPILER --json router.json router/main.p4
+$COMPILER --json monitor.json monitor/main.p4
+$COMPILER --json token.json token/main.p4
+$COMPILER --json verifier.json verifier/main.p4
