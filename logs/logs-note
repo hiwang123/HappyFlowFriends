@@ -1,7 +1,0 @@
-add header會蓋掉tcp port, 要hack state graph
-	 std vs ideal, std vs overwrite
-	 http://lists.p4.org/pipermail/p4-dev_lists.p4.org/2016-September/000481.html
-
-p4可加header在各層之間ex, between tcp and ip
-
-假設沒有nat, 不會去檢查tcp header正確性
